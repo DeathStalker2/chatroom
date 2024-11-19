@@ -1,4 +1,5 @@
 <head>
+  <div onclick="myFunction()">Click to toggle dark mode</div>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,4 +13,12 @@ onclick="document.getElementById('run').innerHTML = 'insert script here'">
 Click me to run a script</button>
 </head>
 <style> h1
-  {font-family: "Audiowide", sans-serif; color: white;} body{background-image: linear-gradient(black, navy);} p{color: white; font-family: "Black Ops One"} </style>
+  {font-family: "Audiowide", sans-serif; color: white;} body{background-image: linear-gradient(black, navy);} p{color: white; font-family: "Black Ops One"} 
+.dark-mode{background-color: white; color: black;}
+</style>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
