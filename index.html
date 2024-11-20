@@ -13,7 +13,7 @@
         body {
             background-image: linear-gradient(black, navy);
             background-repeat: no-repeat;
-            background-size: 1800px 800px;
+            background-size: 800px 800px;
             font-family: "Audiowide", sans-serif;
             color: white;
             text-align: center;
@@ -31,7 +31,9 @@
         .underline-transition {
             position: absolute;
             color: white;
-            text-decoration: none;
+            text-decoration: none; 
+      
+    
         }
         .underline-transition::after {
             content: '';
@@ -44,9 +46,12 @@
             transform: scaleX(0);
             transform-origin: bottom left;
             transition: transform 0.6s ease;
+      
         }
         .underline-transition:hover::after {
             transform: scaleX(1);
+            
+            
         }
         .dark-mode {
             background-color: white;
@@ -63,8 +68,12 @@
 </head>
 <body>
     <div onclick="updateContent()" class="underline-transition" a href="#" style="color: white;">About us</a></div>
+    
+    <div style="margin: 25px 50px 75px 100px;" onclick="updateContentt()" class="underline-transition" a href="#" style="color: white;">Home</a></div>
+    
     <button onclick="toggleDarkMode()">Toggle dark mode</button>
     <h1 id="ead">ChatRoom</h1>
+    
     <p id="roxx">This chatroom <u>should</u> be used for mischievous purposes or anything else.</p>
     <button type="button" id="run" onclick="runScript()">Click me to run a script</button>
 
@@ -78,9 +87,13 @@
         }
 
         function updateContent() {
-            document.getElementById('roxx').innerHTML = 'This project was made in west chester, that\'s all you need to know.';
+            document.getElementById('roxx').innerHTML = "This project was made in west chester, that's all you need to know.";
             document.getElementById('ead').innerHTML = 'About Us';
-        }
+            
+        }function updateContentt() {
+            document.getElementById('roxx').innerHTML = 'This chatroom <u>should</u> be used for mischievous purposes or anything else.';
+            document.getElementById('ead').innerHTML = 'ChatRoom';
+            }
     </script>
 </body>
 </html>
